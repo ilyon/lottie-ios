@@ -126,6 +126,16 @@ public final class CompatibleAnimationView: UIView {
     set { animationView.respectAnimationFrameRate = newValue }
     get { return animationView.respectAnimationFrameRate }
   }
+    
+    @objc
+    public var textProvider: AnimationTextProvider {
+      set {
+        animationView.textProvider = newValue
+      }
+      get {
+        return animationView.textProvider
+      }
+    }
 
   @objc
   public var isAnimationPlaying: Bool {
@@ -290,7 +300,7 @@ public final class CompatibleAnimationView: UIView {
 
   @objc
   public func frameTime(forMarker named: String) -> CGFloat {
-    return animationView.frameTime(forMarker: named) ?? 0
+      return animationView.frameTime(forMarker: named) ?? 0
   }
 
   // MARK: Private

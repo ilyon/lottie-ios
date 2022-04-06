@@ -10,6 +10,7 @@ import Foundation
 /**
  Text provider is a protocol that is used to supply text to `AnimationView`.
  */
+@objc
 public protocol AnimationTextProvider: AnyObject {
     func textFor(keypathName: String, sourceText: String) -> String
 }
