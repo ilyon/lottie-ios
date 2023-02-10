@@ -51,7 +51,7 @@ public final class Animation: Codable {
   let fonts: FontList?
   
   /// Asset Library
-  let assetLibrary: AssetLibrary?
+  public let assetLibrary: AssetLibrary?
   
   /// Markers
   let markers: [Marker]?
