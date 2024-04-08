@@ -152,7 +152,7 @@ public final class LottieAnimation: Codable, Sendable, DictionaryInitializable {
   let fonts: FontList?
 
   /// Asset Library
-  let assetLibrary: AssetLibrary?
+  public let assetLibrary: AssetLibrary?
 
   /// Markers
   let markers: [Marker]?

@@ -5,11 +5,11 @@
 //  Created by Brandon Withrow on 1/9/19.
 //
 
-final class AssetLibrary: Codable, AnyInitializable, Sendable {
+public final class AssetLibrary: Codable, AnyInitializable, Sendable {
 
   // MARK: Lifecycle
 
-  required init(from decoder: Decoder) throws {
+    public required init(from decoder: Decoder) throws {
     var container = try decoder.unkeyedContainer()
     var containerForKeys = container
 
@@ -65,10 +65,10 @@ final class AssetLibrary: Codable, AnyInitializable, Sendable {
   /// The Assets
   let assets: [String: Asset]
 
-  let imageAssets: [String: ImageAsset]
+  public let imageAssets: [String: ImageAsset]
   let precompAssets: [String: PrecompAsset]
 
-  func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
     var container = encoder.unkeyedContainer()
     try container.encode(contentsOf: Array(assets.values))
   }
